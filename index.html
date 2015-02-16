@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html ng-app="menaApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maximo Mena Melgarejo | Página Inicial</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Blueimp image gallery styles -->
+    <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <!-- Bootstrap Gallery styles -->
+    <link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
+
+    <!-- Custom styles -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body ng-controller="mainController">
+
+    <!-- HEADER AND NAVBAR -->
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-9">
+            <h1 id="site-title"><a href="#">Maximo Mena</a></h1>
+            <h2 id="site-subtitle">Doctor en Contabilidad y Finanzas</h2>
+          </div>
+          <div class="col-xs-3">
+            <div class="text-right"><a href="#" id="nav-menu-toggle">&#9776;</a></div>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#biografia">Biografía</a></li>
+            <li><a href="#curriculum-vitae">Curriculum Vitae</a></li>
+            <li><a href="#fotos">Fotos</a></li>
+          </ul>
+        </nav>     
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <div id="main">
+
+      <div ng-view></div>
+
+      <div id="pages" class="container">
+        <div class="row">
+          <div class="col-xs-4">
+            <a class="btn btn-primary" href="#biografia">Biografía</a>
+          </div>
+          <div class="col-xs-4">
+           <a class="btn btn-primary" href="#curriculum-vitae">Curriculum Vitae</a>
+          </div>
+          <div class="col-xs-4">
+            <a class="btn btn-primary" href="#fotos">Fotos</a>
+          </div>
+        </div>
+
+  </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-9">
+            <h2>Maximo Mena</h2>
+          </div>
+
+          <div class="col-xs-3">
+            <ul class="list-inline text-right">
+              <li><a href="mailto:menamaximo@hotmail.com"><i class="fa fa-envelope-square fa-2x"></i></a></li>
+              <li><a href="//facebook.com/maximo.m.melgarejo"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+    <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+    <div id="blueimp-gallery" class="blueimp-gallery" data-use-bootstrap-modal="false">
+        <!-- The container for the modal slides -->
+        <div class="slides"></div>
+        <!-- Controls for the borderless lightbox -->
+        <h3 class="title"></h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="close">×</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+        <!-- The modal dialog, which will be used to wrap the lightbox content -->
+        <div class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body next"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default pull-left prev">
+                            <i class="glyphicon glyphicon-chevron-left"></i>
+                            Previous
+                        </button>
+                        <button type="button" class="btn btn-primary next">
+                            Next
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Angular and Angular Route -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <!-- Blueimp image gallery -->
+    <script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <!-- Blueimp image gallery extension -->
+    <script src="js/bootstrap-image-gallery.min.js"></script>
+
+    <!-- Custom scripts -->
+    <script src="js/scripts.js"></script>
+    <script src="js/page-routing.js"></script>
+
+  </body>
+</html>
